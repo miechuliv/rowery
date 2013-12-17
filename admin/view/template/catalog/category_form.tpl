@@ -148,6 +148,18 @@
                   <?php } ?>
                 </select></td>
             </tr>
+              <tr>
+                  <td>Kategoria wirtualna?</td>
+                  <td><select name="virtual">
+                          <?php if ($virtual) { ?>
+                          <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
+                          <option value="0"><?php echo $text_disabled; ?></option>
+                          <?php } else { ?>
+                          <option value="1"><?php echo $text_enabled; ?></option>
+                          <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                          <?php } ?>
+                      </select></td>
+              </tr>
           </table>
         </div>
         <div id="tab-design">

@@ -117,7 +117,7 @@ class ControllerCommonHeader extends Controller {
 		$categories = $this->model_catalog_category->getCategories(0);
 		
 		foreach ($categories as $category) {
-			if ($category['top']) {
+			if ($category['top'] AND !$category['virtual']) {
 				// Level 2
 				$children_data = array();
 				

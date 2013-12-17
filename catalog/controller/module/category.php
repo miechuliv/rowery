@@ -47,6 +47,7 @@ class ControllerModuleCategory extends Controller {
 		$categories = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories as $category) {
+         if(!$category['virtual']){
 			//$total = $this->model_catalog_product->getTotalProducts(array('filter_category_id' => $category['category_id']));
 
 			$children_data = array();
@@ -81,7 +82,9 @@ class ControllerModuleCategory extends Controller {
                 'name'        => $category['name'],
 				'children'    => $children_data,
 				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
-			);	
+			);
+
+         }
 		}
 
 

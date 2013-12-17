@@ -404,6 +404,14 @@ class ControllerCatalogCategory extends Controller {
 		} else {
 			$this->data['status'] = 1;
 		}
+
+        if (isset($this->request->post['virtual'])) {
+            $this->data['virtual'] = $this->request->post['virtual'];
+        } elseif (!empty($category_info)) {
+            $this->data['virtual'] = $category_info['virtual'];
+        } else {
+            $this->data['virtual'] = 0;
+        }
 				
 		if (isset($this->request->post['category_layout'])) {
 			$this->data['category_layout'] = $this->request->post['category_layout'];
