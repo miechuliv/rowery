@@ -1,0 +1,98 @@
+/////////////////////////////////
+///       OpenCart V1.5.x     ///
+///    Upgrade Instructions   ///
+///  http://www.opencart.com  ///
+/////////////////////////////////
+
+
+NOTE: THIS IS FOR UPGRADING 1.5.x to new 1.5.x versions
+If you have 1.4.x, DO NOT use this upgrade until you have upgraded to 1.5.0 first
+
+
+-------
+UPGRADE
+-------
+
+1. Upload all the files and folders to your server from the "Upload" folder.
+   This can be to anywhere of your choice.
+	
+   e.g. /public_html/store or /public_html
+
+2. If you have a Linux/Unix make sure the following folders and files are writable.
+   chmod 0755 or 0777 image/
+   chmod 0755 or 0777 image/cache/
+   chmod 0755 or 0777 image/data/   
+   chmod 0755 or 0777 system/cache/
+   chmod 0755 or 0777 system/logs/
+   chmod 0755 or 0777 download/
+   chmod 0755 or 0777 config.php
+   chmod 0755 or 0777 admin/config.php
+
+3. Make sure you have installed a MySQL Database which has a user assigned to it 
+   DO NOT USE YOUR ROOT USERNAME AND ROOT PASSWORD
+
+4. Visit the store homepage
+   e.g. http://www.example.com or http://www.example.com/store/
+
+5. Follow the onscreen instructions.
+
+6. Delete the install directory after install is complete.
+
+
+For any support issues please visit: http://www.opencart.com
+
+EOF
+
+OPENCART UPGRADE
+(turn wordwrap on to read this easier)
+=============================
+
+This version of opencart comes with a universal upgrade script that allows you to update your store from as far back as v1.5.0 to the latest version of OpenCart 1.5.x without having to install each version in between. The script is still in beta so there may be some quirks. 
+
+Errors received are mostly informational. There is a good chance that the error occurred because the table no longer exists or the change had already been made. In these cases, there is nothing to worry about. 
+
+Please be sure to post any errors shown on the forums so that we may address these errors in the future.
+
+
+If using a version older than OpenCart v1.5.0, you will need to first upgrade all the in between versions until you reach 1.5.0. Then you can run this script for upgrades to future 1.5.x releases.
+
+
+
+Upgrade Steps
+------------------------------
+
+STEP 1. BACKUP YOUR EXISTING STORE FILES AND DATABASE!!!
+
+STEP 2. Upload ALL new files on top of your current install EXCEPT config.php and admin/config.php
+
+STEP 3. Browse to http://www.yourstore.com/shop/install/upgrade.php
+
+STEP 4. After about 10 seconds you should see the Upgrade Success message or a list of errors.
+
+STEP 5. Post any upgrade script errors problems in the forums
+
+STEP 6. Clear any cookies in your browser to avoid getting token errors.
+
+STEP 7. Load the admin page & press Ctrl+F5 twice to force the browser to update the css changes.
+
+STEP 8. Goto Admin->Users->User Groups and Edit the Top Adminstrator group. Check All boxes.
+
+STEP 9. Goto Admin and Edit the main System Settings. Update all fields and click save, even if nothing changed.
+
+STEP 10. Load the store front & press Ctrl+F5 twice to force the browser to update the css changes.
+
+
+
+Possible Errors and Solutions:
+------------------------------
+Nothing to specify at this time
+
+
+
+
+Please post any other errors in the forum threads regarding this version
+
+
+
+That's It!
+OpenCart Dev Team

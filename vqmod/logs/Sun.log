@@ -1,0 +1,24 @@
+---------- Date: 2013-08-11 19:45:12 ~ IP : 83.8.55.166 ----------
+REQUEST URI : /gackade/
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/gackade/vqmod/xml/-usergallery.xml
+   id        : usergallery
+   version   : 
+   vqmver    : 
+   author    : Mieszko Malawski
+Could not resolve path for [catalog/view/theme/shoppica/template/product/product.tpl] (SKIPPED)
+----------------------------------------------------------------------
+
+
+---------- Date: 2013-08-11 19:45:27 ~ IP : 83.8.55.166 ----------
+REQUEST URI : /gackade/index.php?route=product/category&amp;path=60
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/gackade/vqmod/xml/-usergallery.xml
+   id        : usergallery
+   version   : 
+   vqmver    : 
+   author    : Mieszko Malawski
+Could not resolve path for [catalog/view/theme/shoppica/template/product/product.tpl] (SKIPPED)
+----------------------------------------------------------------------
+
+

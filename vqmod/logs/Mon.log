@@ -1,0 +1,39 @@
+---------- Date: 2013-11-18 16:24:40 ~ IP : 83.8.145.41 ----------
+REQUEST URI : /gackade/
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/gackade/vqmod/xml/vqmod_profiler.xml
+   id        : OpenCart profiler
+   version   : 1.0
+   vqmver    : 1
+   author    : Alexander Toporkov (toporchillo@gmail.com)
+SEARCH NOT FOUND (ABORTING MOD): $controller->$method($args);
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2013-11-18 16:39:07 ~ IP : 83.8.145.41 ----------
+REQUEST URI : /gackade/
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/gackade/vqmod/xml/vqmod_profiler.xml
+   id        : OpenCart profiler
+   version   : 1.0
+   vqmver    : 1
+   author    : Alexander Toporkov (toporchillo@gmail.com)
+SEARCH NOT FOUND (ABORTING MOD): $controller->$method($args);
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2013-11-18 17:07:00 ~ IP : 83.8.145.41 ----------
+REQUEST URI : /gackade/
+MOD DETAILS:
+   modFile   : /home/demostrona/domains/demo.stronazen.pl/public_html/gackade/vqmod/xml/vqmod_profiler.xml
+   id        : OpenCart profiler
+   version   : 1.0
+   vqmver    : 1
+   author    : Alexander Toporkov (toporchillo@gmail.com)
+SEARCH NOT FOUND (ABORTING MOD): $controller->$method($args);
+
+----------------------------------------------------------------------
+
+
