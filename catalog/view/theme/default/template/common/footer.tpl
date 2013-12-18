@@ -2,9 +2,7 @@
 
 <div id="mychat"><a href="http://www.phpfreechat.net">Creating chat rooms everywhere - phpFreeChat</a></div>
 
-<script type="text/javascript">
-    $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.0/server' });
-</script>
+
 
 <div id="footer">
 <div class="poziom" style="width:950px;">
@@ -96,5 +94,12 @@
             }
         });
     });
+
+
+
     //--></script>
+
+<script type="text/javascript">
+    $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.0/server' });
+</script>
 </body></html>
