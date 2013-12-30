@@ -12,8 +12,7 @@ class ModelCheckoutOrder extends Model {
 			price = '" . (float)$product['price'] . "', total = '" . (float)$product['total'] . "',
 			tax = '" . (float)$product['tax'] . "',
 			reward = '" . (int)$product['reward'] . "'
-			, kaucja = '".$product['kaucja']."'
-			 , kaucja_cost = '".(float)$product['kaucja_cost']."'");
+		 ");
 
  
 			$order_product_id = $this->db->getLastId();

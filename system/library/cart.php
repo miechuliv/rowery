@@ -21,25 +21,7 @@ class Cart {
 		if (!$this->data) {
 			foreach ($this->session->data['cart'] as $key => $quantity) {
 
-                if(strpos($key,'##')!==false)
-                {
-                    $p = explode('##', $key);
 
-                    $key = $p[0];
-
-                    if(isset($p[1]))
-                    {
-                        $kaucja = $p[1];
-                    }
-                    else
-                    {
-                        $kaucja = false;
-                    }
-                }
-                else
-                {
-                    $kaucja = false;
-                }
 
 
 				$product = explode(':', $key);
@@ -242,21 +224,7 @@ class Cart {
 						$stock = false;
 					}
 
-                    if($kaucja)
-                    {
-                        if($kaucja == 'zw')
-                        {
-                            $kaucja_cost = $product_query->row['kaucja_zw'];
-                        }
-                        if($kaucja == 'bzw')
-                        {
-                            $kaucja_cost = $product_query->row['kaucja_bzw'];
-                        }
-                    }
-                    else
-                    {
-                        $kaucja_cost = false;
-                    }
+
 					
 					$this->data[$key] = array(
 						'key'             => $key,
@@ -282,8 +250,7 @@ class Cart {
 						'width'           => $product_query->row['width'],
 						'height'          => $product_query->row['height'],
 						'length_class_id' => $product_query->row['length_class_id'],
-                        'kaucja' => $kaucja,
-                        'kaucja_cost' => $kaucja_cost,
+
 					);
 				} else {
 					$this->remove($key);
@@ -294,17 +261,14 @@ class Cart {
 		return $this->data;
   	}
 		  
-  	public function add($product_id, $qty = 1, $option = array(), $lower = false, $kaucja = false) {
+  	public function add($product_id, $qty = 1, $option = array(), $lower = false) {
     	if (!$option) {
       		$key = (int)$product_id;
     	} else {
       		$key = (int)$product_id . ':' . base64_encode(serialize($option));
     	}
 
-        if($kaucja)
-        {
-             $key.='##'.$kaucja;
-        }
+
 
     	
 		if ((int)$qty && ((int)$qty > 0)) {

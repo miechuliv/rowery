@@ -132,7 +132,7 @@
   <?php }else{ ?>
 	<div id="search-error">
 		<?php echo $contact_link_text; ?><br/>
-		<strong>+49 (0) 160 951 432 00</strong><br/><a href="mailto:kontakt@diesel-land.de" style="font-size:16px;"><strong>kontakt@diesel-land.de</strong></a>
+		<strong>+49 777 777 777</strong><br/><a href="mailto:test@wp.pl" style="font-size:16px;"><strong>test@wp.pl</strong></a>
 	</div>
   <?php } /* ?>
   <?php if (!$categories && !$products) { ?>

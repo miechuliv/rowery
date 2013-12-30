@@ -93,10 +93,10 @@ class ControllerProductCategory extends Controller {
 
         if(isset($this->request->post['clear']) AND $this->request->post['clear'])
         {
-            unset($this->request->post['year']);
+          /*  unset($this->request->post['year']);
             unset($this->request->post['make']);
             unset($this->request->post['model']);
-            unset($this->request->post['type']);
+            unset($this->request->post['type']); */
             unset($this->request->post['all-cats']);
             unset($this->request->post['manufacturer_id']);
         }

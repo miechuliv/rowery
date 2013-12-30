@@ -1584,6 +1584,12 @@ class ControllerCheckoutCheckout extends Controller {
                $this->session->data['comment'] = strip_tags($this->request->post['comment']);
                // end pay method
 
+               // jesli zanaczono ze adres płatności jest taki sma jak wysyłki
+               if(isset($this->request->post['shipping_address']))
+               {
+                   $this->session->data['guest']['shipping'] = $this->session->data['guest']['payment'];
+               }
+
 
                // write order to DB
               $result = $this->finalStep();

@@ -18,6 +18,8 @@ class ControllerModuleAlsoBought extends Controller{
            $this->data['text_also_bought_heading'] = $this->language->get('text_also_bought_heading');
            $this->data['text_also_bought_more'] = $this->language->get('text_also_bought_more');
 
+           $this->data['button_cart'] = $this->language->get('button_cart');
+
            $this->load->model('module/cross_sell');
            $results=$this->model_module_cross_sell->getAlsoBought($this->data['product_id']);
 
