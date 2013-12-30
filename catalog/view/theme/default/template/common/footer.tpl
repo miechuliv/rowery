@@ -1,7 +1,7 @@
 </div></div>
 
-<div id="mychat"><a href="http://www.phpfreechat.net">Creating chat rooms everywhere - phpFreeChat</a></div>
-
+<?php /* <div id="mychat"><a href="http://www.phpfreechat.net">Creating chat rooms everywhere - phpFreeChat</a></div>
+*/ ?>
 
 
 <div id="footer">
@@ -99,7 +99,7 @@
 
     //--></script>
 
-<script type="text/javascript">
+<?php /* <script type="text/javascript">
     $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.0/server' });
-</script>
+</script> */ ?>
 </body></html>

@@ -108,12 +108,14 @@ function hidedesc(divid) {
 </head>
 <body>
 <div id="container">
+
+    <?php /*
     <div id="mychat"><a href="http://www.phpfreechat.net">Creating chat rooms everywhere - phpFreeChat</a></div>
 
 
    <script type="text/javascript">
         $('#mychat').phpfreechat({ serverUrl: '/phpfreechat-2.1.0/server', isAdmin: 1, show_powered_by: 0 });
-    </script>
+    </script> */ ?>
 
     <div id="header">
 
