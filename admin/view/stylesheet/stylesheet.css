@@ -350,17 +350,16 @@ body > #container {
 }
 a.button, .list a.button {
 	text-decoration: none;
-	color: #FFF;
+	color: #666;
 	display: inline-block;
-	padding: 5px 15px 5px 15px;
-	background: #003A88;
-	-webkit-border-radius: 10px 10px 10px 10px;
-	-moz-border-radius: 10px 10px 10px 10px;
-	-khtml-border-radius: 10px 10px 10px 10px;
-	border-radius: 10px 10px 10px 10px;
+	padding: 5px 10px;
+	background: #eee;
+	border:1px solid #ddd;
+}
+a.button:hover, .list a.button:hover {
+	background:#ddd; border-color:#ccc;
 }
 .list {
-	border-collapse: collapse;
 	width: 100%;
 	border-top: 1px solid #DDDDDD;
 	border-left: 1px solid #DDDDDD;
@@ -377,7 +376,8 @@ a.button, .list a.button {
 .list thead td a, .list thead td {
 	text-decoration: none;
 	color: #222222;
-	font-weight: bold;
+	font-weight: normal;
+	text-align:center;
 }
 .list tbody td a {
 	text-decoration: underline;
@@ -387,20 +387,18 @@ a.button, .list a.button {
 	padding: 0px 5px;
 	background: #FFFFFF;
 }
-.list tbody tr:hover td {
-	background-color: #FFFFCB;
-}
+
 .list .left {
-	text-align: left;
-	padding: 7px;
+	text-align: center;
+	padding: 10px;
 }
 .list .right {
-	text-align: right;
-	padding: 7px;
+	text-align: center;
+	padding: 10px;
 }
 .list .center {
 	text-align: center;
-	padding: 7px;
+	padding: 10px;
 }
 .list .asc {
 	padding-right: 15px;
@@ -411,7 +409,7 @@ a.button, .list a.button {
 	background: url('../image/desc.png') right center no-repeat;
 }
 .list tr.filter td, .list tr:hover.filter td {
-	padding: 5px;
+	padding: 10px;
 	background: #E7EFEF;
 }
 .pagination {
@@ -757,3 +755,30 @@ table tbody tr td #lista {width:99%;}
 #comment-list table tr td a {text-decoration:none;}
 
 .filter_name {width:120px;}
+
+#form > table > tbody > tr > td {padding:0; width:100%; text-align:center;}
+#form > table > tbody > tr > td:first-child > a {width:100%; border:0; text-align:center; padding:10px 0; font-weight:bold; color:red;}
+#form > table > tbody > tr > td > table {width:100%;}
+#form > table > tbody > tr > td > table > tbody > tr:first-child > td,
+#form > table > tbody > tr > td > table > thead > tr:first-child > td {background:#efefef;}
+
+.filter > td > input[type='text'],
+.filter > td > select,
+#special > tbody > tr > td > input[type='text'],
+#special > tbody > tr > td > select {width:90%; margin:auto; padding:2px;}
+#special > tbody > tr > td  {text-align:center;}
+
+.filter > .left {padding:0 !important;}
+
+.button.filtr,
+.button.filtr2 {background:red !important; color:#fff !important; text-shadow:0 -1px 0 #d90000; border:1px solid #d90000; font-weight:bold; width:100%; min-width:100px; text-align:center !important; padding:10px 0 !important;}
+.button.filtr:hover,
+.button.filtr2:hover {background:#d90000 !important;}
+.button.filtr2 {width:auto !important; }
+.button.bigger {padding:10px 15px !important;}
+
+.order-left {   float: left; width: 45%; margin: 0; padding: 0; }
+.order-right {  float: right; width: 45%; margin: 0; padding: 0; }
+.order-left, .order-right, .order-main {border: lightskyblue solid 1px; margin-bottom: 20px;}
+.box-head { background-color: lightskyblue; color: white; font-size: 16px; padding: 5px;}
+.box-cont td { padding: 10px; width: 190px; }
