@@ -27,6 +27,8 @@ class ControllerCommonOneSlashSeo extends Controller{
             foreach ($parts as $part) {
 
 
+                $part = trim($part,'&');
+
                 // szukamy wg jezyka, zalozenie ze jeden jezy na stronie
                 $query = $this->db->query("SELECT * FROM " . DB_PREFIX . "url_alias WHERE keyword = '" . $this->db->escape($part) . "' AND language='".$this->config->get('config_language')."'   ");
 
@@ -161,6 +163,8 @@ class ControllerCommonOneSlashSeo extends Controller{
 
     public function rewrite($link) {
 
+
+
         $url_info = parse_url(str_replace('&amp;', '&', $link));
 
         $url = '';
@@ -172,12 +176,15 @@ class ControllerCommonOneSlashSeo extends Controller{
         $url_ending = '';
 
 
+
+
         foreach ($data as $key => $value) {
             if (isset($data['route'])) {
 
                 if ($key == 'path') {
 
                     $categories = explode('_', $value);
+
 
 
 
@@ -218,9 +225,9 @@ class ControllerCommonOneSlashSeo extends Controller{
                         unset($data[$key]);
                     }
 
-                /*
-                 * przepysiwanie dla produktu
-                 */
+                    /*
+                     * przepysiwanie dla produktu
+                     */
                 } elseif($data['route'] == 'product/product' && $key == 'product_id')
                 {
 
@@ -249,12 +256,14 @@ class ControllerCommonOneSlashSeo extends Controller{
 
 
 
+
         if ($url) {
             unset($data['route']);
 
             $query = '';
 
-            if ($data AND $url_ending == '') {
+            // if ($data AND $url_ending == '') {
+            if ($data) {
                 foreach ($data as $key => $value) {
                     $query .= '&' . $key . '=' . $value;
                 }
@@ -264,6 +273,8 @@ class ControllerCommonOneSlashSeo extends Controller{
                 }
             }
 
+
+
             // dodajemy pierwszego slasha jesli jescze go nie ma
             if($url[0]!='/')
             {
@@ -271,7 +282,7 @@ class ControllerCommonOneSlashSeo extends Controller{
             }
 
 
-            return $url_info['scheme'] . '://' . $url_info['host'] . (isset($url_info['port']) ? ':' . $url_info['port'] : '') . str_replace('/index.php', '', $url_info['path']) . $url . $query . $url_ending;
+            return $url_info['scheme'] . '://' . $url_info['host'] . (isset($url_info['port']) ? ':' . $url_info['port'] : '') . str_replace('/index.php', '', $url_info['path']) . $url .$url_ending . $query;
         } else {
             return $link;
         }
