@@ -1,6 +1,26 @@
 <?php
 class ModelCatalogCategory extends Model {
-	public function getCategory($category_id,$all = false) {
+
+
+    function __construct($registry)
+    {
+        parent::__construct($registry);
+        $this->setId('category_id');
+        $this->setTableName('category');
+        $this->setTableAlias('c');
+        $this->setDefaultJoins(
+            array(
+                array(
+                    'type' => 'LEFT',
+                    'table' => 'category_description',
+                    'alias' => 'cd',
+                    'field' => 'category_id',
+                )
+            )
+        );
+    }
+
+    public function getCategory($category_id,$all = false) {
 
         if($all)
         {

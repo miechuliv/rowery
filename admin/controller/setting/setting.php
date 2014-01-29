@@ -435,6 +435,12 @@ class ControllerSettingSetting extends Controller {
 		} else {
 			$this->data['config_layout_id'] = $this->config->get('config_layout_id');
 		}
+
+        if (isset($this->request->post['config_layout_product'])) {
+            $this->data['config_layout_product'] = $this->request->post['config_layout_product'];
+        } else {
+            $this->data['config_layout_product'] = $this->config->get('config_layout_product');
+        }
 				
 		$this->load->model('design/layout');
 		

@@ -1,14 +1,43 @@
 <?php 
 class ControllerProductCategory extends Controller {  
-	public function index() { 
+	public function index() {
+
 		$this->language->load('product/category');
+
+
 		
 		$this->load->model('catalog/category');
+
+        $data = $this->model_catalog_category->getMany(array(
+            array(
+                'alias' => 'cd',
+                'column' => 'language_id',
+                'relation' => '=',
+                'value' => '2',
+                'type' => 'int'
+            )
+        ),
+        array(
+          'start' => 0,
+            'stop' => 20,
+        ),
+        array(
+            array(
+                'alias' => 'c',
+                'column' => 'category_id',
+                'order' => 'ASC'
+            )
+        ),
+            array(),
+            '*'
+        );
+
+
 		
 		$this->load->model('catalog/product');
 		
-		$this->load->model('tool/image'); 
-		
+		$this->load->model('tool/image');
+
 		if (isset($this->request->get['filter'])) {
 			$filter = $this->request->get['filter'];
 		} else {

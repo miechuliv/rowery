@@ -178,6 +178,9 @@
                     <?php foreach ($layouts as $layout) { ?>
                     <?php if (isset($category_layout[0]) && $category_layout[0] == $layout['layout_id']) { ?>
                     <option value="<?php echo $layout['layout_id']; ?>" selected="selected"><?php echo $layout['name']; ?></option>
+                        <?php } elseif($layout['layout_id'] == 3) { ?>
+                        <option value="<?php echo $layout['layout_id']; ?>" selected="selected" ><?php echo $layout['name']; ?></option>
+
                     <?php } else { ?>
                     <option value="<?php echo $layout['layout_id']; ?>"><?php echo $layout['name']; ?></option>
                     <?php } ?>
@@ -194,7 +197,10 @@
                     <?php foreach ($layouts as $layout) { ?>
                     <?php if (isset($category_layout[$store['store_id']]) && $category_layout[$store['store_id']] == $layout['layout_id']) { ?>
                     <option value="<?php echo $layout['layout_id']; ?>" selected="selected"><?php echo $layout['name']; ?></option>
-                    <?php } else { ?>
+                        <?php } elseif($layout['layout_id'] == 3) { ?>
+                        <option value="<?php echo $layout['layout_id']; ?>" selected="selected" ><?php echo $layout['name']; ?></option>
+
+                        <?php } else { ?>
                     <option value="<?php echo $layout['layout_id']; ?>"><?php echo $layout['name']; ?></option>
                     <?php } ?>
                     <?php } ?>

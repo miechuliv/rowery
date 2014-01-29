@@ -75,7 +75,8 @@ if (!isset($_SERVER['HTTP_HOST'])) {
 
 // Helper
 require_once(DIR_SYSTEM . 'helper/json.php'); 
-require_once(DIR_SYSTEM . 'helper/utf8.php'); 
+require_once(DIR_SYSTEM . 'helper/utf8.php');
+require_once(DIR_SYSTEM . 'helper/html.php');
 
 // Engine
 require_once(DIR_SYSTEM . 'engine/action.php'); 

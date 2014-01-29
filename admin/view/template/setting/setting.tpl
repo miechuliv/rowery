@@ -251,6 +251,20 @@
                   <?php } ?>
                 </select></td>
             </tr>
+              <tr>
+                  <td><?php echo $entry_layout; ?></td>
+                  <td><select name="config_layout_product">
+                          <?php foreach ($layouts as $layout) { ?>
+                          <?php if ($layout['layout_id'] == $config_layout_product) { ?>
+                          <option value="<?php echo $layout['layout_id']; ?>" selected="selected"><?php echo $layout['name']; ?></option>
+                          <?php } else { ?>
+                          <option value="<?php echo $layout['layout_id']; ?>"><?php echo $layout['name']; ?></option>
+                          <?php } ?>
+                          <?php } ?>
+                      </select></td>
+              </tr>
+
+
           </table>
         </div>
         <div id="tab-option">
