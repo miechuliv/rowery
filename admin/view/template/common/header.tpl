@@ -126,7 +126,7 @@ function hidedesc(divid) {
     <?php } ?>
   </div>
   <?php if ($logged) { ?>
-  <div id="menu">
+  <?php /* <div id="menu">
     <ul class="left" style="display: none;">
       <li id="dashboard"><a href="<?php echo $home; ?>" class="top"><?php echo $text_dashboard; ?></a></li>
       <li id="catalog"><a class="top"><?php echo $text_catalog; ?></a>
@@ -285,7 +285,7 @@ function hidedesc(divid) {
       </li>
       <li><a class="top" href="<?php echo $logout; ?>"><?php echo $text_logout; ?></a></li>
     </ul>
-  </div>
+  </div> */ ?>
   <?php } ?>
 </div>
 
