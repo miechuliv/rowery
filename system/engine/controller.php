@@ -237,14 +237,16 @@ abstract class Controller {
 
     }
 
-    protected function setFields($fields,$data,$request_type = 'post')
+    protected function setFields($fields,$data,$request_type = 'post',$default_data = false)
     {
         foreach($fields as $field)
         {
             if (isset($this->request->$request_type[$field])) {
                 $this->data[$field] = $this->request->$request_type[$field];
-            } elseif (!empty($data)) {
+            } elseif (!empty($data) AND isset($data[$field])) {
                 $this->data[$field] = $data[$field];
+            } elseif (!empty($default_data) AND isset($default_data[$field]) ) {
+                $this->data[$field] = $default_data[$field];
             } else {
                 $this->data[$field] = '';
             }
