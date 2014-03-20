@@ -358,9 +358,9 @@
                             html  = '<tbody id="special-row' + special_row + '">';
                             html += '  <tr>';
                             html += '    <td class="left"><select name="product_special[' + special_row + '][customer_group_id]">';
-                        <?php foreach ($customer_groups as $customer_group) { ?>
+                        <?php /* foreach ($customer_groups as $customer_group) { ?>
                                 html += '      <option value="<?php echo $customer_group['customer_group_id']; ?>"><?php echo $customer_group['name']; ?></option>';
-                            <?php } ?>
+                            <?php } */ ?>
                             html += '    </select></td>';
                             html += '    <td class="right"><input type="text" name="product_special[' + special_row + '][priority]" value="" size="2" /></td>';
                             html += '    <td class="right"><input type="text" name="product_special[' + special_row + '][price]" value="" /></td>';

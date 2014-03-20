@@ -1,7 +1,10 @@
 <?php
 class ModelCatalogManufacturer extends Model {
     public function addManufacturer($data) {
-        $this->db->query("INSERT INTO " . DB_PREFIX . "manufacturer SET name = '" . $this->db->escape($data['name']) . "',  sort_order = '" . (int)$data['sort_order'] . "',  follow = '".(int)$data['follow']."' ");
+        $this->db->query("INSERT INTO " . DB_PREFIX . "manufacturer SET
+        name = '" . $this->db->escape($data['name']) . "',
+         sort_order = '" . (int)$data['sort_order'] . "',
+         follow = '".(int)$data['follow']."' ");
 
         $manufacturer_id = $this->db->getLastId();
 

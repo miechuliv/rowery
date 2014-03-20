@@ -23,7 +23,10 @@ class ModelCatalogCategory extends Model {
 
 
 	public function addCategory($data) {
-		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "', `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "', `column` = '" . (int)$data['column'] . "', sort_order = '" . (int)$data['sort_order'] . "',
+		$this->db->query("INSERT INTO " . DB_PREFIX . "category SET parent_id = '" . (int)$data['parent_id'] . "',
+		 `top` = '" . (isset($data['top']) ? (int)$data['top'] : 0) . "',
+		  `column` = '" . (int)$data['column'] . "',
+		  sort_order = '" . (int)$data['sort_order'] . "',
 		status = '" . (int)$data['status'] . "',
 		virtual = '" . (int)$data['virtual'] . "',
 		date_modified = NOW(), date_added = NOW()");
